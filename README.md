@@ -1,7 +1,7 @@
 # The Torchbearer
 
-**Student Name:** ___________________________
-**Student ID:** ___________________________
+**Student Name:** Brandon Garate
+**Student ID:** 130364309
 **Course:** CS 460 – Algorithms | Spring 2026
 
 > This README is your project documentation. Write it the way a developer would document
@@ -13,17 +13,17 @@
 
 ## Part 1: Problem Analysis
 
-> Document why this problem is not just a shortest-path problem. Three bullet points, one
-> per question. Each bullet should be 1-2 sentences max.
-
 - **Why a single shortest-path run from S is not enough:**
-  _Your answer here._
+
+  Preforming only one run from the entrance will only give us the shortest distances from `S` to every node. It will never visit every relic, since it will never commit to an order. The total fuel also depends on which relic-to-relic stretch we will actually be chaining together. 
 
 - **What decision remains after all inter-location costs are known:**
-  _Your answer here._
+
+  Pairwise costs only say how expensive each stretch is, we will still need to choose an order throughb all the relics, which minimizes the sum of the stretches. 
 
 - **Why this requires a search over orders (one sentence):**
-  _Your answer here._
+
+  Each real solution is still characterized by an order, where the relics are first collected. Different orders will most likely hold a different total cost, which means that we must compare lots of theses orders in order to find the optimal order, and not by a singular run of a shortest-path algo
 
 ---
 

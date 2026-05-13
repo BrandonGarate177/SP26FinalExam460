@@ -3,10 +3,6 @@
 **Student Name:** Brandon Garate 
 **Student ID:** 130364309
 
-> Instructions: Write at least four dated entries. Required entry types are marked below.
-> Two to five sentences per entry is sufficient. Write entries as you go, not all in one
-> sitting. Graders check that entries reflect genuine work across multiple sessions.
-> Delete all blockquotes before submitting.
 
 ` sounds good `
 
@@ -14,8 +10,21 @@
 
 ## Entry 1 – [May 13, 3pm]: Initial Plan
 
-> Required. Write this before writing any code. Describe your plan: what you will
-> implement first, what parts you expect to be difficult, and how you plan to test.
+
+Math: 
+    - One Dijkstra from `S` is only fixing for distance from `S`. It does NOT select an order to visit all relics. 
+    - After precomputation we will still need to search over permutations / the orders. 
+
+Implementation: 
+    - `run_dijkstra` should be created first. 
+    - `select_sources` && `precompute_distances`. 
+    - `find_optical_route` / `_explore`, these should state where we are, which relics are done, and the cost so far. 
+        the goal is that all relics are collected, and then pay costs to T. 
+
+How are we supposed to preform the precalculation? How do we determine which nodes we need to run Dijkstra FROM so that every lef the search needs exists in our table? 
+
+
+
 
 
 
