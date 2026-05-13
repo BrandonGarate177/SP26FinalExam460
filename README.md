@@ -31,12 +31,13 @@
 
 ### Part 2a: Source Selection
 
-> List the source node types as a bullet list. For each, one-line reason.
+- **Spawn:** cheapest paths from the entrance.
+- **Relic (each):** cheapest paths from any relic you might leave next.
 
 | Source Node Type | Why it is a source |
 |---|---|
-| _node type_ | _one-line reason_ |
-| _node type_ | _one-line reason_ |
+| Spawn | Planner needs every shortest cost leaving `S`. |
+| Relic chamber | Same, for each chamber you can occupy between objectives. |
 
 ### Part 2b: Distance Storage
 

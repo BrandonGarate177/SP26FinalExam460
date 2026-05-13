@@ -32,15 +32,15 @@ def explain_problem():
         Your Part 1 README answers, written as a string.
         Must match what you wrote in README Part 1.
     """
-    return """Why a single shortest-path run from S is not enough:
+    return """- **Why a single shortest-path run from S is not enough:**
 
   Performing only one run from the entrance will only give us the shortest distances from `S` to every node. It will never visit every relic, since it will never commit to an order. The total fuel also depends on which relic-to-relic stretch we will actually be chaining together.
 
-What decision remains after all inter-location costs are known:
+- **What decision remains after all inter-location costs are known:**
 
   Pairwise costs only say how expensive each stretch is, we will still need to choose an order through all the relics, which minimizes the sum of the stretches.
 
-Why this requires a search over orders (one sentence):
+- **Why this requires a search over orders (one sentence):**
 
   Each real solution is still characterized by an order, where the relics are first collected. Different orders will most likely hold a different total cost, which means that we must compare lots of these orders in order to find the optimal order, and not by a singular run of a shortest-path algo."""
 
@@ -61,10 +61,9 @@ def select_sources(spawn, relics, exit_node):
     -------
     list[node]
         No duplicates. Order does not matter.
-
-    TODO
     """
-    pass
+    _ = exit_node
+    return list(dict.fromkeys([spawn, *relics]))
 
 
 def run_dijkstra(graph, source):
