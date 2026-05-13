@@ -29,7 +29,11 @@ How are we supposed to preform the precalculation? How do we determine which nod
 
 ## Entry 2 – [May 13, evening]: Part 2 design assumptions
 
-I briefly treated the exit as a candidate Dijkstra **source** so we would have a row for “leaving T,” but the planner never needs that: we only need cheapest costs **to** the exit from wherever we currently are (spawn or a relic). I kept `select_sources` as spawn plus each distinct relic and rely on `dist_table[u][exit_node]` for the final leg. I also almost wrote README Part 2b about the nested `dist_table` until I re-checked the handout mapping and aligned 2b with the single-source `dict` returned by `run_dijkstra`.
+We treated the exit as a canditate Dijkstra source so we would have a row for "leaving T", but the planner didn't need that. We only really need the cheapest cost TO the exit from which ever position we currently located. 
+
+I kept `select_sources` as the spawn, we also had each relic rely on `dist_table[u][exit_node]` for the final stretch. 
+
+We also almost wrote Part 2.b abotu the nested `dist_table` but I caught the handout mapping aligned 2b with the single sourced `dist` given through running `run_dijkstra`
 
 ---
 
