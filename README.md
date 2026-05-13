@@ -41,15 +41,13 @@
 
 ### Part 2b: Distance Storage
 
-> Fill in the table. No prose required.
-
 | Property | Your answer |
 |---|---|
-| Data structure name | |
-| What the keys represent | |
-| What the values represent | |
-| Lookup time complexity | |
-| Why O(1) lookup is possible | |
+| Data structure name | Python `dict` (hash map) |
+| What the keys represent | A graph node `v` (destination) |
+| What the values represent | Min cost `source → v` from this Dijkstra run |
+| Lookup time complexity | `O(1)` expected per lookup |
+| Why O(1) lookup is possible | Dict lookup is hashing on the node key |
 
 ### Part 2c: Precomputation Complexity
 
