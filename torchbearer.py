@@ -86,7 +86,6 @@ def run_dijkstra(graph, source):
     for nbrs in graph.values():
         for v, _ in nbrs:
             nodes.add(v)
-            
 
     dist = {u: float("inf") for u in nodes}
     dist[source] = 0.0

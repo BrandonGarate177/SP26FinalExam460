@@ -51,12 +51,10 @@
 
 ### Part 2c: Precomputation Complexity
 
-> State the total complexity and show the arithmetic. Two to three lines max.
-
-- **Number of Dijkstra runs:** _your answer_
-- **Cost per run:** _your answer_
-- **Total complexity:** _your answer_
-- **Justification (one line):** _your answer_
+- **Number of Dijkstra runs:** one per `select_sources` output node (≤ `k + 1` for `k = |M|`).
+- **Cost per run:** `O(m log n)` for `n = |V|`, `m = |E|` (binary heap Dijkstra).
+- **Total complexity:** `O((k + 1) · m log n)` = `O(k m log n)`.
+- **Justification (one line):** each run is a full Dijkstra from a different source; counts multiply.
 
 ---
 
