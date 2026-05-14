@@ -60,38 +60,29 @@
 
 ## Part 3: Algorithm Correctness
 
-> Document your understanding of why Dijkstra produces correct distances.
-> Bullet points and short sentences throughout. No paragraphs.
-
 ### Part 3a: What the Invariant Means
 
-> Two bullets: one for finalized nodes, one for non-finalized nodes.
-> Do not copy the invariant text from the spec.
-
 - **For nodes already finalized (in S):**
-  _Your answer here._
+  `dist[u]` is the cheapest total cost from the source to `u`. no cheaper stretch exists.
 
 - **For nodes not yet finalized (not in S):**
-  _Your answer here._
+  `dist[u]` is the cheapest total cost found so far, from the paths which **interior** vertices all lie in the final set. 
 
 ### Part 3b: Why Each Phase Holds
 
-> One to two bullets per phase. Maintenance must mention nonnegative edge weights.
+- **Initialization — why the invariant holds before iteration 1:**
+  If you start with the source at distance `0` and everything else is valued at `infinity`, there are "no cheaper path" options execpt the source. 
 
-- **Initialization : why the invariant holds before iteration 1:**
-  _Your answer here._
+- **Maintenance — why finalizing the min-dist node is always correct:**
+  If you pick `u` with the smallest possible distance outside the final set, any other path to `u` will need to first reach some "non-finalized" `w` through a first step with a non negative costs. This way the path is at least as long as `dist[w] ≥ dist[u]`. 
 
-- **Maintenance : why finalizing the min-dist node is always correct:**
-  _Your answer here._
 
-- **Termination : what the invariant guarantees when the algorithm ends:**
-  _Your answer here._
+- **Termination — what the invariant guarantees when the algorithm ends:**
+  Every node that ever gets finalized has its true shortest distance from the source. Anything else remains as `infinity`
 
 ### Part 3c: Why This Matters for the Route Planner
 
-> One sentence connecting correct distances to correct routing decisions.
-
-_Your answer here._
+A wrong `dist` value would misprice every corridor leg in `dist_table`, so the search could pick a suboptimal relic order or wrongly think a route is impossible.
 
 ---
 
