@@ -37,9 +37,14 @@ We also almost wrote Part 2.b abotu the nested `dist_table` but I caught the han
 
 ---
 
-## Entry 3 – [Date]: [Short description]
+## Entry 3 – [May 14, afternoon]: back after a day
 
-_Your entry here._
+Last time i was on here i knocked out part 3 (readme + the `dijkstra_invariant_check()` string so it actually matches). 
+
+Been a full day since, lining up what's left: 
+
+part 4 / `explain_search()`, then the meaty parts 5-7 with the actual search + pruning + `solve` 
+
 
 ---
 
